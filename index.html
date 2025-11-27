@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro Tienda</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+
+        <!-- Página 1: Formulario -->
+        <div class="page active" id="formPage">
+            <div class="header">
+                <h1>¡Únete a nuestra tienda!</h1>
+                <p>¡Recibe las mejores ofertas en ropa deportiva!</p>
+            </div>
+
+            <div class="discount-banner">
+                ¡10% de descuento en tu primera compra!
+            </div>
+
+            <form id="signupForm">
+                <div class="form-group">
+                    <label for="email">Email<span class="required">*</span></label>
+                    <input type="email" id="email" name="email" placeholder="tu@correo.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="nombre">Nombre<span class="required">*</span></label>
+                    <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                </div>
+
+                <div class="checkbox-group">
+                    <label>Qué te interesa? (opcional)</label>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="calzado" name="intereses" value="Calzado para hombre">
+                        <label for="calzado">Calzado para hombre</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ropa-hombre" name="intereses" value="Ropa para hombre">
+                        <label for="ropa-hombre">Ropa para hombre</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="ropa-mujer" name="intereses" value="Ropa para mujer">
+                        <label for="ropa-mujer">Ropa para mujer</label>
+                    </div>
+
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="accesorios" name="intereses" value="Accesorios">
+                        <label for="accesorios">Accesorios</label>
+                    </div>
+                </div>
+
+                <div class="terms">
+                    <input type="checkbox" id="terminos" required>
+                    <label for="terminos">Acepto la política de privacidad y deseo recibir ofertas.</label>
+                </div>
+
+                <button type="submit" class="submit-btn">Suscribirse ahora</button>
+            </form>
+        </div>
+
+        <!-- Página 2: Confirmación -->
+        <div class="page" id="confirmationPage">
+            <h2>Confirma tus datos</h2>
+            <p>Por favor verifica que la información sea correcta</p>
+
+            <div class="data-review">
+                <div class="data-review-title">Resumen de tu información</div>
+
+                <div class="data-item">
+                    <span class="data-label">Nombre completo</span>
+                    <span class="data-value" id="confirmNombre"></span>
+                </div>
+
+                <div class="data-item">
+                    <span class="data-label">Correo electrónico</span>
+                    <span class="data-value" id="confirmEmail"></span>
+                </div>
+
+                <div class="data-item">
+                    <span class="data-label">Intereses</span>
+                    <div class="interests-tags" id="confirmIntereses"></div>
+                </div>
+
+                <div class="action-buttons">
+                    <button id="edit-btn" class="btn-secondary">Editar</button>
+                    <button id="confirmBtn" class="btn-primary">Confirmar</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
